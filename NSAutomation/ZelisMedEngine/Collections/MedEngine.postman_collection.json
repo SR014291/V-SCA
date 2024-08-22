@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "0ec040e2-d949-456f-b733-0b457dfada98",
+		"name": "MedEngine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UB_Ancillary_Discount_TM_FAC_SZ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0ed2bea4-7d98-4ef8-9bc3-9f2a45991689",
+						"exec": [
+							"\r",
+							"\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"NetworkID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.networkId).to.eql(1088);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"affId\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.affId).to.eql(172296817);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Claimstatus\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimStatus).to.eql('P');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"reasonCode\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.reasonCode).to.eql('300');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.repriceAmt).to.eql(3294.56);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"providerSpeciality\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.providerSpeciality).to.eql('X03');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"eobNote\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.eobNote).to.eql('NPPN/PROVIDER SELECT');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"providerLookupMethod\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.providerLookupMethod).to.eql('TM_FAC_SZ');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceCode\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.repriceCode).to.eql('ANCILLARY_DISCOUNT');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"lineStatus1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[0].lineStatus).to.eql('OP20');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[0].repriceAmt).to.eql(45.76);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"lineStatus2\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[1].lineStatus).to.eql('OP20');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt2\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[1].repriceAmt).to.eql(50.4);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"lineStatus3\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[2].lineStatus).to.eql('OP20');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt3\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[2].repriceAmt).to.eql(384.8);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"lineStatus4\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[3].lineStatus).to.eql('OP20');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt4\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[3].repriceAmt).to.eql(983.2);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"lineStatus5\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[4].lineStatus).to.eql('OP20');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt5\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[4].repriceAmt).to.eql(952.8);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"lineStatus6\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[5].lineStatus).to.eql('OP20');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt6\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[5].repriceAmt).to.eql(877.6);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"strictSSL": true,
+				"followRedirects": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"claimId\": 500003695,\r\n    \"taxId\": \"760591590\",\r\n    \"clientId\": 8075,\r\n    \"receiveDate\": \"2020-09-10T00:00:00\",\r\n    \"claimType\": \"U\",\r\n    \"fromDate\": \"2019-12-06T00:00:00\",\r\n    \"thruDate\": \"2019-12-06T00:00:00\",\r\n    \"chargeAmt\": 4118.2,\r\n    \"employerName\": null,\r\n    \"providerName\": \"BEAUMONT\",\r\n    \"providerAdd1\": \"2830 CALDER AVE\",\r\n    \"providerAdd2\": \"NONE\",\r\n    \"providerCity\": \"BEAUMONT\",\r\n    \"providerState\": \"TX\",\r\n    \"providerZip\": \"77702\",\r\n    \"physicianLName\": \"Christus St. Elizabeth Hospital\",\r\n    \"physicianFName\": \"\",\r\n    \"physicianMI\": null,\r\n    \"dxCode1\": \"S41111\",\r\n    \"dxCode2\": \"Z882\",\r\n    \"dxCode3\": \"\",\r\n    \"dxCode4\": \"\",\r\n    \"drgCode\": \"\",\r\n    \"claimNbr\": \"\",\r\n    \"externalClaimId\": null,\r\n    \"trackingCode\": null,\r\n    \"secondaryProviderAdd1\": null,\r\n    \"secondaryProviderAdd2\": null,\r\n    \"secondaryProviderCity\": null,\r\n    \"secondaryProviderState\": \"TX\",\r\n    \"secondaryProviderZip\": \"77702\",\r\n    \"compassClientId\": 45327,\r\n    \"compassSubClientId\": 63881,\r\n    \"coveredAmt\": 4118.2,\r\n    \"webMethodClaimID\": null,\r\n    \"claimLines\": [\r\n        {\r\n            \"lineId\": 290428201,\r\n            \"claimId\": 500003695,\r\n            \"fromDate\": \"2019-12-06T00:00:00\",\r\n            \"thruDate\": \"2019-12-06T00:00:00\",\r\n            \"pos\": \"\",\r\n            \"tos\": \"\",\r\n            \"hcpcs\": null,\r\n            \"procCode\": \"0270\",\r\n            \"modifier\": \"00\",\r\n            \"dxIndicator\": null,\r\n            \"chargeAmt\": 57.2,\r\n            \"units\": 1.0,\r\n            \"coveredAmt\": 57.2\r\n        },\r\n        {\r\n            \"lineId\": 290428202,\r\n            \"claimId\": 500003695,\r\n            \"fromDate\": \"2019-12-06T00:00:00\",\r\n            \"thruDate\": \"2019-12-06T00:00:00\",\r\n            \"pos\": \"\",\r\n            \"tos\": \"\",\r\n            \"hcpcs\": \"36415\",\r\n            \"procCode\": \"0300\",\r\n            \"modifier\": \"00\",\r\n            \"dxIndicator\": null,\r\n            \"chargeAmt\": 63.0,\r\n            \"units\": 1.0,\r\n            \"coveredAmt\": 63.0\r\n        },\r\n        {\r\n            \"lineId\": 290428203,\r\n            \"claimId\": 500003695,\r\n            \"fromDate\": \"2019-12-06T00:00:00\",\r\n            \"thruDate\": \"2019-12-06T00:00:00\",\r\n            \"pos\": \"\",\r\n            \"tos\": \"\",\r\n            \"hcpcs\": \"85025\",\r\n            \"procCode\": \"0305\",\r\n            \"modifier\": \"00\",\r\n            \"dxIndicator\": null,\r\n            \"chargeAmt\": 481.0,\r\n            \"units\": 1.0,\r\n            \"coveredAmt\": 481.0\r\n        },\r\n        {\r\n            \"lineId\": 290428204,\r\n            \"claimId\": 500003695,\r\n            \"fromDate\": \"2019-12-06T00:00:00\",\r\n            \"thruDate\": \"2019-12-06T00:00:00\",\r\n            \"pos\": \"\",\r\n            \"tos\": \"\",\r\n            \"hcpcs\": \"73090\",\r\n            \"procCode\": \"0320\",\r\n            \"modifier\": \"00\",\r\n            \"dxIndicator\": null,\r\n            \"chargeAmt\": 1229.0,\r\n            \"units\": 1.0,\r\n            \"coveredAmt\": 1229.0\r\n        },\r\n        {\r\n            \"lineId\": 290428205,\r\n            \"claimId\": 500003695,\r\n            \"fromDate\": \"2019-12-06T00:00:00\",\r\n            \"thruDate\": \"2019-12-06T00:00:00\",\r\n            \"pos\": \"\",\r\n            \"tos\": \"\",\r\n            \"hcpcs\": \"99283\",\r\n            \"procCode\": \"0450\",\r\n            \"modifier\": \"00\",\r\n            \"dxIndicator\": null,\r\n            \"chargeAmt\": 1191.0,\r\n            \"units\": 1.0,\r\n            \"coveredAmt\": 1191.0\r\n        },\r\n        {\r\n            \"lineId\": 290428206,\r\n            \"claimId\": 500003695,\r\n            \"fromDate\": \"2019-12-06T00:00:00\",\r\n            \"thruDate\": \"2019-12-06T00:00:00\",\r\n            \"pos\": \"\",\r\n            \"tos\": \"\",\r\n            \"hcpcs\": \"12002\",\r\n            \"procCode\": \"0450\",\r\n            \"modifier\": \"00\",\r\n            \"dxIndicator\": null,\r\n            \"chargeAmt\": 1097.0,\r\n            \"units\": 1.0,\r\n            \"coveredAmt\": 1097.0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://zcmcmpwebd101.dev.zelis.com/medengine/claim/add",
+					"protocol": "http",
+					"host": [
+						"zcmcmpwebd101",
+						"dev",
+						"zelis",
+						"com"
+					],
+					"path": [
+						"medengine",
+						"claim",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HCFA_Ancillary_Discount_TM_FAC_SZ_A2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "691b0377-de3c-4c01-a112-99d7a3aff66f",
+						"exec": [
+							"\r",
+							"\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"NetworkID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.networkId).to.eql(828);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"affId\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.affId).to.eql(10010094);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Claimstatus\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimStatus).to.eql('P');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"reasonCode\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.reasonCode).to.eql('300');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.repriceAmt).to.eql(98.28);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"providerSpeciality\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.providerSpeciality).to.eql('X33');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"eobNote\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.eobNote).to.eql('NPPN/NPPN                                              ');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"providerLookupMethod\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.providerLookupMethod).to.eql('TM_FAC_SZ_A2');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceCode\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.repriceCode).to.eql('ANCILLARY_DISCOUNT');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"lineStatus1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[0].lineStatus).to.eql('OP30');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"repriceAmt1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.claimLines[0].repriceAmt).to.eql(98.28);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"strictSSL": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"claimId\": 500003642,\r\n    \"taxId\": \"621474680\",\r\n    \"clientId\": 8053,\r\n    \"networkId\": 828,\r\n    \"affId\": 10010094,\r\n    \"receiveDate\": \"2020-09-08T00:00:00\",\r\n    \"claimType\": \"H\",\r\n    \"fromDate\": \"2019-06-06T00:00:00\",\r\n    \"thruDate\": \"2019-06-06T00:00:00\",\r\n    \"processDate\": \"2020-09-08T13:50:11\",\r\n    \"claimStatus\": \"P\",\r\n    \"reasonCode\": \"000\",\r\n    \"chargeAmt\": 140.4,\r\n    \"coveredAmt\": 140.4,\r\n    \"repriceAmt\": 98.28,\r\n    \"employerName\": null,\r\n    \"providerName\": \"AMERICAN HOME PATIENT\",\r\n    \"providerAdd1\": \"624 DOUGLAS AVE STE 1416\",\r\n    \"providerAdd2\": \"\",\r\n    \"providerCity\": \"ALTAMONTE SPRINGS\",\r\n    \"providerState\": \"FL\",\r\n    \"providerZip\": \"32714\",\r\n    \"providerSpeciality\": \"X33\",\r\n    \"physicianLName\": \"AMERICAN HOMEPATIENT (ANC)\",\r\n    \"physicianFName\": \"\",\r\n    \"physicianMI\": null,\r\n    \"dxCode1\": \"G4733\",\r\n    \"dxCode2\": \"\",\r\n    \"dxCode3\": \"\",\r\n    \"dxCode4\": \"\",\r\n    \"drgCode\": \"\",\r\n    \"claimNbr\": \"\",\r\n    \"eobNote\": \"\",\r\n    \"providerLookupMethod\": \"TM_FAC_SZ_A2\",\r\n    \"isAutoFlag\": false,\r\n    \"isResubmit\": false,\r\n    \"repriceCode\": \"\",\r\n    \"externalClaimId\": null,\r\n    \"trackingCode\": null,\r\n    \"secondaryProviderAdd1\": null,\r\n    \"secondaryProviderAdd2\": null,\r\n    \"secondaryProviderCity\": null,\r\n    \"secondaryProviderState\": \"FL\",\r\n    \"secondaryProviderZip\": \"32955\",\r\n    \"compassClientId\": 29515,\r\n    \"compassSubClientId\": 37767,\r\n    \"webMethodClaimID\": null,\r\n    \"claimLines\": [\r\n        {\r\n            \"lineId\": 290428077,\r\n            \"fullId\": null,\r\n            \"claimId\": 500003642,\r\n            \"fromDate\": \"2019-06-06T00:00:00\",\r\n            \"thruDate\": \"2019-06-06T00:00:00\",\r\n            \"pos\": \"\",\r\n            \"tos\": \"\",\r\n            \"hcpcs\": null,\r\n            \"procCode\": \"A7034\",\r\n            \"modifier\": \"NU\",\r\n            \"dxIndicator\": null,\r\n            \"chargeAmt\": 140.4,\r\n            \"repriceAmt\": 98.28,\r\n            \"lineStatus\": \"\",\r\n            \"units\": 1,\r\n            \"coveredAmt\": 140.4\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://zcmcmpwebd101.dev.zelis.com/medengine/claim/add",
+					"protocol": "http",
+					"host": [
+						"zcmcmpwebd101",
+						"dev",
+						"zelis",
+						"com"
+					],
+					"path": [
+						"medengine",
+						"claim",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://zcmcmpwebd101.dev.zelis.com/medengine/claim/500003695",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://zcmcmpwebd101.dev.zelis.com/medengine/claim/500003695",
+					"protocol": "http",
+					"host": [
+						"zcmcmpwebd101",
+						"dev",
+						"zelis",
+						"com"
+					],
+					"path": [
+						"medengine",
+						"claim",
+						"500003695"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
